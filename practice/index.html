@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascirpt practice</title>
+    <script>
+       
+       function getDateInfo(){
+        const date = new Date();
+        const elment = document.getElementById('time');
+         elment.innerText = date.toTimeString();
+       }
+      window.onload =() =>{
+        getDateInfo();
+        setInterval(getDateInfo, 1000)
+      }
+    </script>
 </head>
+
 <body>
-    
-    <script src="./es6_features.js"></script>
+      <h1 id="time"></h1>
+    <script src="./date_method.js"></script>
 </body>
+
 </html>
